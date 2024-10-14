@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 Text("I want to ", style: TextStyle(fontSize: 32)),
-                Text("Eat",
+                Text("Sleep",
                     style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
@@ -76,18 +76,18 @@ class _HomePageState extends State<HomePage> {
           //Tap Bar
           TabBar(tabs: myTabs),
           //Tap bar view
-          const Expanded(
+          Expanded(
             child: TabBarView(children: [
             //Donut tab
             DonutTab(),
             //Buger tab
-            BurgerTab(),
+            const BurgerTab(),
             //Smoothie tab
-            SmoothieTab(),
+            const SmoothieTab(),
             //Pancake tab
-            PancakeTab(),
+            const PancakeTab(),
             //Pizza tab
-            PizzaTab(),
+            const PizzaTab(),
           ]),)
           //Carrito
         ]),

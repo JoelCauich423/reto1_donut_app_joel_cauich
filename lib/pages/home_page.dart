@@ -15,21 +15,57 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> myTabs = [
-    //donut tab
-    const MyTab(iconPath: 'lib/icons/donut.png'),
+    // Donut tab con texto debajo
+    Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        MyTab(iconPath: 'lib/icons/donut.png'),
+        SizedBox(height: 4), // Espacio entre el ícono y el texto
+        Text("Donuts", style: TextStyle(fontSize: 12)),
+      ],
+    ),
 
-    //burger tab
-    const MyTab(iconPath: 'lib/icons/burger.png'),
+    // Burger tab con texto debajo
+    Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        MyTab(iconPath: 'lib/icons/burger.png'),
+        SizedBox(height: 4),
+        Text("Burgers", style: TextStyle(fontSize: 12)),
+      ],
+    ),
 
-    //smoothie tab
-    const MyTab(iconPath: 'lib/icons/smoothie.png'),
+    // Smoothie tab con texto debajo
+    Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        MyTab(iconPath: 'lib/icons/smoothie.png'),
+        SizedBox(height: 4),
+        Text("Smoothies", style: TextStyle(fontSize: 12)),
+      ],
+    ),
 
-    //pancakes tab
-    const MyTab(iconPath: 'lib/icons/pancakes.png'),
+    // Pancakes tab con texto debajo
+    Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        MyTab(iconPath: 'lib/icons/pancakes.png'),
+        SizedBox(height: 4),
+        Text("Pancakes", style: TextStyle(fontSize: 12)),
+      ],
+    ),
 
-    //pizza tab
-    const MyTab(iconPath: 'lib/icons/pizza.png'),
+    // Pizza tab con texto debajo
+    Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        MyTab(iconPath: 'lib/icons/pizza.png'),
+        SizedBox(height: 4),
+        Text("Pizza", style: TextStyle(fontSize: 12)),
+      ],
+    ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -59,7 +95,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         body: Column(children: [
-          //TEXTO "I want to eat"
+          // TEXTO "I want to eat"
           const Padding(
             padding: EdgeInsets.all(24.0),
             child: Row(
@@ -73,23 +109,24 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          //Tap Bar
+          // Tap Bar
           TabBar(tabs: myTabs),
-          //Tap bar view
+          // Tap bar view
           Expanded(
             child: TabBarView(children: [
-            //Donut tab
-            DonutTab(),
-            //Buger tab
-            const BurgerTab(),
-            //Smoothie tab
-            const SmoothieTab(),
-            //Pancake tab
-            const PancakeTab(),
-            //Pizza tab
-            const PizzaTab(),
-          ]),)
-          //Carrito
+              // Donut tab
+              DonutTab(),
+              // Buger tab
+              const BurgerTab(),
+              // Smoothie tab
+              const SmoothieTab(),
+              // Pancake tab
+              const PancakeTab(),
+              // Pizza tab
+              const PizzaTab(),
+            ]),
+          )
+          // Carrito
         ]),
       ),
     );
